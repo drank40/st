@@ -10,7 +10,7 @@
 #define FONT_SIZE 12
 #endif
 
-static char *font = "mono:pixelsize=" FONT_SIZE ":antialias=true:autohint=true";
+static char *font = "mono:pixelsize=" FONT_SIZE ":antialias=true:autohint=true,Symbols Nerd Font:size=" FONT_SIZE ":antialias=true";
 static char *font2[] = { "JoyPixels:pixelsize=" FONT_SIZE ":antialias=true:autohint=true" };
 static int borderpx = 2;
 
