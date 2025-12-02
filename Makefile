@@ -7,6 +7,10 @@ include config.mk
 SRC = st.c x.c boxdraw.c hb.c
 OBJ = $(SRC:.c=.o)
 
+CONFIG_VARS = FONT_SIZE
+# cursed, pass in every VAR as -D
+CFLAGS += $(foreach v,$(CONFIG_VARS),$(if $($(v)),-D$(v)=\"$($(v))\"))
+
 all: options st
 
 options:
