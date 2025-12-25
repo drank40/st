@@ -973,6 +973,33 @@ ttyhangup()
 	kill(pid, SIGHUP);
 }
 
+void
+newterm(const Arg *arg)
+{
+	char cwd[PATH_MAX];
+	char pidpath[64];
+	ssize_t len;
+
+	snprintf(pidpath, sizeof(pidpath), "/proc/%d/cwd", pid);
+	len = readlink(pidpath, cwd, sizeof(cwd) - 1);
+	if (len < 0) {
+		cwd[0] = '.';
+		cwd[1] = '\0';
+	} else {
+		cwd[len] = '\0';
+	}
+
+	switch (fork()) {
+	case -1:
+		die("fork failed: %s\n", strerror(errno));
+		break;
+	case 0:
+		chdir(cwd);
+		execlp("st", "st", NULL);
+		_exit(1);
+	}
+}
+
 int
 tattrset(int attr)
 {
