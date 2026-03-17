@@ -1310,6 +1310,14 @@ xinit(int cols, int rows)
 			xw.vis, CWBackPixel | CWBorderPixel | CWBitGravity
 			| CWEventMask | CWColormap, &xw.attrs);
 
+	/* blur behind hint for compositors (picom, kwin) */
+	if (alpha < 1.0) {
+		Atom blurAtom = XInternAtom(xw.dpy,
+				"_KDE_NET_WM_BLUR_BEHIND_REGION", False);
+		XChangeProperty(xw.dpy, xw.win, blurAtom, XA_CARDINAL,
+				32, PropModeReplace, (unsigned char *)&(int){0}, 1);
+	}
+
 	memset(&gcvalues, 0, sizeof(gcvalues));
 	gcvalues.graphics_exposures = False;
 	xw.buf = XCreatePixmap(xw.dpy, xw.win, win.w, win.h, xw.depth);
