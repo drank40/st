@@ -7,11 +7,10 @@
  */
 
 #ifndef FONT_SIZE
-#define FONT_SIZE 14
+#define FONT_SIZE 12
 #endif
 
-//static char *font = "Iosevka:pixelsize=" FONT_SIZE ":antialias=true:autohint=true,Symbols Nerd Font:size=" FONT_SIZE ":antialias=true";
-static char *font = "Departure Mono:pixelsize=" FONT_SIZE ":antialias=true:autohint=true,Symbols Nerd Font:size=" FONT_SIZE ":antialias=true";
+static char *font = "Iosevka:pixelsize=" FONT_SIZE ":antialias=true:autohint=true,Symbols Nerd Font:size=" FONT_SIZE ":antialias=true";
 static char *font2[] = { "JoyPixels:pixelsize=" FONT_SIZE ":antialias=true:autohint=true" };
 static int borderpx = 2;
 
