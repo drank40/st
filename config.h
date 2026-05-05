@@ -11,7 +11,7 @@
 #endif
 
 //static char *font = "Iosevka:pixelsize=" FONT_SIZE ":antialias=true:autohint=true,Symbols Nerd Font:size=" FONT_SIZE ":antialias=true";
-static char *font = "Handjet:pixelsize=" FONT_SIZE ":antialias=true:autohint=true,Symbols Nerd Font:size=" FONT_SIZE ":antialias=true";
+static char *font = "Handjet:pixelsize=" FONT_SIZE ":spacing=100:variations=ELSH=8,ESHP=0,EGRD=100,wght=500:antialias=true:autohint=true,DejaVu Sans Mono:pixelsize=" FONT_SIZE ":antialias=true,Symbols Nerd Font:size=" FONT_SIZE ":antialias=true";
 static char *font2[] = { "JoyPixels:pixelsize=" FONT_SIZE ":antialias=true:autohint=true" };
 static int borderpx = 2;
 
@@ -33,7 +33,7 @@ char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 char *vtiden = "\033[?6c";
 
 /* Kerning / character bounding-box multipliers */
-static float cwscale = 1.0;
+static float cwscale = 0.90;
 static float chscale = 1.0;
 
 /*
