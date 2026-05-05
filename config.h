@@ -7,10 +7,11 @@
  */
 
 #ifndef FONT_SIZE
-#define FONT_SIZE 12
+#define FONT_SIZE 14
 #endif
 
-static char *font = "Iosevka:pixelsize=" FONT_SIZE ":antialias=true:autohint=true,Symbols Nerd Font:size=" FONT_SIZE ":antialias=true";
+//static char *font = "Iosevka:pixelsize=" FONT_SIZE ":antialias=true:autohint=true,Symbols Nerd Font:size=" FONT_SIZE ":antialias=true";
+static char *font = "Handjet:pixelsize=" FONT_SIZE ":antialias=true:autohint=true,Symbols Nerd Font:size=" FONT_SIZE ":antialias=true";
 static char *font2[] = { "JoyPixels:pixelsize=" FONT_SIZE ":antialias=true:autohint=true" };
 static int borderpx = 2;
 
@@ -112,7 +113,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.95;
+float alpha = 0.98;
 float alphaOffset = 0.0;
 float alphaUnfocus;
 
